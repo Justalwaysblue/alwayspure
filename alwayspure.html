@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alwayspure</title>
+    <link href="./alwayspure.css" rel="stylesheet" />
+    <!-- <link href="./theme.css" rel="stylesheet" /> -->
+  </head>
+  <body class="application">
+    <div class="application__container">
+      <header class="application__header">
+        <div class="application__header-bar">
+          <div class="application__header-buttons">
+            <button>Sidebar</button>
+            <button>New Dialogue</button>
+          </div>
+          <div class="application__header-title">alwayspure</div>
+          <div class="application__header-buttons">
+            <button id="settings-button">Settings</button>
+          </div>
+        </div>
+      </header>
+      <nav class="application__nav">this is nav</nav>
+      <main class="application__main">
+        <article class="application__content"></article>
+        <div class="application__panel">
+          <textarea
+            class="application__panel-textarea"
+            id="message-input"
+          ></textarea>
+          <div class="application__panel-bar">
+            <div class="application__panel-bar-left">
+              <button>Attachment</button>
+            </div>
+            <div class="application__panel-bar-right">
+              <button id="send-button">Send</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <dialog id="settings-dialog">
+      <form method="dialog">
+        <fieldset class="settings__fieldset">
+          <h3 class="settings__header">Settings</h3>
+          <label class="settings__label">
+            API Key:
+            <input type="password" id="api-key" name="api-key" />
+          </label>
+          <label class="settings__label">
+            API URL:
+            <input type="text" id="api-url" name="api-url" />
+          </label>
+          <label class="settings__label">
+            Model:
+            <input type="text" id="model" name="model" />
+          </label>
+          <button id="save-settings">Save</button>
+        </fieldset>
+      </form>
+    </dialog>
+
+    <script type="module" src="./alwayspure.js"></script>
+  </body>
+</html>
